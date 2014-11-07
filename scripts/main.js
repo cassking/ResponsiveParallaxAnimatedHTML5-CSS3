@@ -24,7 +24,7 @@ $(function() {
 //SMOOTH OUT THE SCROLL WHEN CLICKING ON MAIN MENU
 $("#menu-main-navigation a").click(function(){
     var target = $(this).attr("href");
-    $("body").animate( { scrollTop: $(target).offset().top - 50}, 1000); 
+    $("body,html").animate( { scrollTop: $(target).offset().top - 50}, 1000); 
     $(".tamman-menu").hide();
        $(".menu-button").removeClass('is-active');
        return false;
@@ -34,7 +34,7 @@ $("#menu-main-navigation a").click(function(){
 //SMOOTH OUT THE SCROLL WHEN CLICKING ON MAIN MENU
 
 $(".top a").click(function(){
-    $("body").animate( { scrollTop:0 }, 1000); 
+    $("body, html").animate( { scrollTop:0 }, 1000); 
 return false;
 
       
@@ -44,7 +44,7 @@ return false;
 var menuButton = document.getElementById('menuButton');
     menuButton.addEventListener('click', function (e) {
     menuButton.classList.toggle('is-active');
-    e.preventDefault();
+   
 });
 
 
